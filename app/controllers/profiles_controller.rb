@@ -19,6 +19,9 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    if user_signed_in?
+      redirect_to new_profile_path if !current_user.profile.present?
+    end
   end
 
   # POST /profiles

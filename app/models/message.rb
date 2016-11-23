@@ -7,6 +7,6 @@ class Message < ApplicationRecord
 
   # makes your message's time more readable to humans
   def message_time
-    created_at.strftime("%m/%d/%y at %l:%M %p")
+    created_at.strftime("%d/%m/%y at %l:%M %p")
   end
 end
